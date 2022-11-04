@@ -1,3 +1,5 @@
+### ESTO NO SE USA!!! esta comentado en test.xacro
+
 # topics
 publish_velocity: true
 publish_encoder:  false

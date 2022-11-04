@@ -3,7 +3,7 @@
 
 <xacro:macro name="joint_motor" params="motor_name parent_link child_link *origin *axis">
   <xacro:property name="params_yaml"  value="$(find gazebo_ros_motors)/params/joint_motor.yaml"/>
-  <xacro:property name="motor_param" value="${load_yaml(params_yaml)}"/>
+  <xacro:property name="motor_param" value="${xacro.load_yaml(params_yaml)}"/>
   <joint name="${motor_name}" type="continuous">
       <parent link="${parent_link}"/>
       <child link="${child_link}"/>

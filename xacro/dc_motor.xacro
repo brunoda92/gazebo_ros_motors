@@ -2,8 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:macro name="dc_motor" params="motor_name parent_link child_link *origin *axis">
-  <!-- <xacro:property name="params_yaml" value="$(find gazebo_ros_motors)/params/dc_motor.yaml"/> -->
-  <xacro:property name="motor_param" value="${load_yaml(params_yaml)}"/>
+  <xacro:property name="motor_param" value="${xacro.load_yaml(params_yaml)}"/>
   <joint name="${motor_name}" type="continuous">
       <parent link="${parent_link}"/>
       <child link="${child_link}"/>
@@ -36,6 +35,7 @@
       <electric_inductance>${motor_param['electric_inductance']}</electric_inductance>
       <gear_ratio>${motor_param['gear_ratio']}</gear_ratio>
       <encoder_ppr>${motor_param['encoder_ppr']}</encoder_ppr>
+      <velocity_noise>${motor_param['velocity_noise']}</velocity_noise>
       <rosDebugLevel>Debug</rosDebugLevel>
     </plugin>
   </gazebo>

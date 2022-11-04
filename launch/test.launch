@@ -1,6 +1,7 @@
 <launch>
 
-  <arg name="model" default="$(find gazebo_ros_motors)/xacro/test.xacro" />
+  <!--<arg name="model" default="$(find gazebo_ros_motors)/xacro/test.xacro" />-->
+  <arg name="model" default="$(find gazebo_ros_motors)/xacro/test_v2.xacro" />
 
   <param name="robot_description" command="$(find xacro)/xacro $(arg model)" />
   <node  name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-z 1.0 -unpause -urdf -model motor -param robot_description" respawn="false" output="screen" />
