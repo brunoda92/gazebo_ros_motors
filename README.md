@@ -6,4 +6,4 @@ This repository is a fork from nilseuropa's original [plugin](https://github.com
 
 ##### Authors
 
-Bruno D'Angelo [brunoda92](https://github.com/brunoda92) in cooperation with Sebastián Sansoni
+Bruno D'Angelo [brunoda92](https://github.com/brunoda92) in collaboration with Sebastián Sansoni
